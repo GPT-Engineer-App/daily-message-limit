@@ -6,7 +6,7 @@ const messages = [
 
 function MessageHistory() {
   return (
-    <Box w="100%" p={4} bg="gray.100" overflowY="auto" maxH="300px">
+    <Box w="100%" p={4} bg="gray.100" overflowY="auto" flex="1">
       <VStack spacing={2}>
         {messages.map((msg, index) => (
           <Box key={index} bg={msg.sender === "me" ? "blue.500" : "gray.300"} p={3} borderRadius="lg" alignSelf={msg.sender === "me" ? "flex-end" : "flex-start"}>

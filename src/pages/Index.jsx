@@ -49,13 +49,12 @@ const Index = () => {
   };
 
   return (
-    <Container maxW="full" padding={4} bg="gray.100">
+    <Container maxW="full" padding={4} bg="gray.100" height="100vh" display="flex" flexDirection="column" justifyContent="space-between">
+      <MessageHistory />
       <VStack spacing={4} align="stretch">
-        <MessageHistory />
-
         <Textarea placeholder="Write your message here..." value={message} onChange={handleMessageChange} size="lg" height="200px" />
-        <Text mb={2}>{message.length} / 500 characters</Text>
         <Button leftIcon={<FaPaperPlane />} colorScheme="blue" onClick={sendMessage} isDisabled={message.length < 500}>
+          <Text mb={2}>{message.length} / 500 characters</Text>
           Send Message
         </Button>
       </VStack>
