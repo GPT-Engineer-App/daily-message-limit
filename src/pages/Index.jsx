@@ -52,9 +52,7 @@ const Index = () => {
     <Container maxW="full" padding={4} bg="gray.100">
       <VStack spacing={4} align="stretch">
         <MessageHistory />
-        <Text fontSize="2xl" mb={4}>
-          Daily Messaging App
-        </Text>
+
         <Textarea placeholder="Write your message here..." value={message} onChange={handleMessageChange} size="lg" height="200px" />
         <Text mb={2}>{message.length} / 500 characters</Text>
         <Button leftIcon={<FaPaperPlane />} colorScheme="blue" onClick={sendMessage} isDisabled={message.length < 500}>
