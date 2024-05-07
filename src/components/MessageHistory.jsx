@@ -9,8 +9,8 @@ function MessageHistory() {
     <Box w="100%" p={4} bg="gray.100" overflowY="auto" maxH="300px">
       <VStack spacing={2}>
         {messages.map((msg, index) => (
-          <Box key={index} bg="blue.100" p={3} borderRadius="lg" alignSelf={msg.sender === "me" ? "flex-end" : "flex-start"}>
-            <Text>{msg.content}</Text>
+          <Box key={index} bg={msg.sender === "me" ? "blue.500" : "gray.300"} p={3} borderRadius="lg" alignSelf={msg.sender === "me" ? "flex-end" : "flex-start"}>
+            <Text color={msg.sender === "me" ? "white" : "black"}>{msg.content}</Text>
           </Box>
         ))}
       </VStack>

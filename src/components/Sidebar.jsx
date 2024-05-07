@@ -5,7 +5,7 @@ const Sidebar = () => {
   const conversations = ["Alice", "Bob", "Charlie"];
 
   return (
-    <Box width="300px" height="100vh" bg="gray.200" p={4}>
+    <Box width="300px" height="100vh" bg="gray.600" p={4}>
       <Text fontSize="2xl" mb={4}>
         Conversations
       </Text>
