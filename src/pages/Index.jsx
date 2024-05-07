@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Textarea, Button, Text, useToast, VStack } from "@chakra-ui/react";
 import { FaPaperPlane } from "react-icons/fa";
+import MessageHistory from "../components/MessageHistory";
 
 const Index = () => {
   const [message, setMessage] = useState("");
@@ -49,7 +50,8 @@ const Index = () => {
 
   return (
     <Container centerContent maxW="container.md" padding={4}>
-      <VStack spacing={4}>
+      <VStack spacing={4} align="stretch">
+        <MessageHistory />
         <Text fontSize="2xl" mb={4}>
           Daily Messaging App
         </Text>
