@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 import { Box, Text, VStack, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody } from "@chakra-ui/react";
 const messages = [
   { sender: "me", content: "Hello!" },
   { sender: "other", content: "Hi there!" },
+  { sender: "me", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
 ];
 
 function MessageHistory() {

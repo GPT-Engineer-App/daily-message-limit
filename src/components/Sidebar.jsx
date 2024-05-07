@@ -1,11 +1,13 @@
-import React from "react";
-import { Box, VStack, Text, Divider } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, VStack, Text, Divider, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody } from "@chakra-ui/react";
 
 const Sidebar = () => {
   const conversations = ["Alice", "Bob", "Charlie"];
+  const [profileModalIsOpen, setProfileModalIsOpen] = useState(false);
+  const profileModalOnClose = () => setProfileModalIsOpen(false);
 
   return (
-    <Box width="300px" height="100vh" bg="gray.600" p={4}>
+    <Box width="300px" height="100vh" bg="gray.100" p={4}>
       <Text fontSize="2xl" mb={4}>
         Conversations
       </Text>
@@ -16,6 +18,16 @@ const Sidebar = () => {
           </Text>
         ))}
       </VStack>
+      <Modal isOpen={profileModalIsOpen} onClose={profileModalOnClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Profile</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text>Your profile details here.</Text>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 };
