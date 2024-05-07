@@ -19,7 +19,7 @@ const Sidebar = () => {
           </Text>
         ))}
       </VStack>
-      <Button position="fixed" bottom="4" left="50%" transform="translateX(-50%)" onClick={() => setProfileModalIsOpen(true)} bg="blue.500" color="white" p={3} borderRadius="full">
+      <Button mt={4} onClick={() => setProfileModalIsOpen(true)} bg="blue.500" color="white" p={3} borderRadius="full" w="full">
         <FaUser />
         <Text ml={2}>Fredrik</Text>
       </Button>
