@@ -54,7 +54,7 @@ const Index = () => {
       <VStack spacing={4} align="stretch">
         <Textarea placeholder="Write your message here..." value={message} onChange={handleMessageChange} size="lg" height="200px" />
         <Button leftIcon={<FaPaperPlane />} colorScheme="blue" onClick={sendMessage} isDisabled={message.length < 500}>
-          <Text mb={2} color={message.length > 500 ? "red.500" : "black"}>
+          <Text mb={2} color={message.length < 500 ? "red.500" : "green.500"} opacity="0.8">
             {message.length}
           </Text>
           Send Message
