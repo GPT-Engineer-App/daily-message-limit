@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Box, VStack, Text, Divider, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody } from "@chakra-ui/react";
+import { Box, VStack, Text, Divider, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Button } from "@chakra-ui/react";
+import { FaUser } from "react-icons/fa";
 
 const Sidebar = () => {
   const conversations = ["Alice", "Bob", "Charlie"];
@@ -7,7 +8,7 @@ const Sidebar = () => {
   const profileModalOnClose = () => setProfileModalIsOpen(false);
 
   return (
-    <Box width="300px" height="100vh" bg="gray.100" p={4}>
+    <Box width="300px" height="100vh" bg="gray.100" p={4} borderRight="1px" borderColor="gray.200">
       <Text fontSize="2xl" mb={4}>
         Conversations
       </Text>
@@ -18,6 +19,10 @@ const Sidebar = () => {
           </Text>
         ))}
       </VStack>
+      <Button position="fixed" bottom="4" left="50%" transform="translateX(-50%)" onClick={() => setProfileModalIsOpen(true)} bg="blue.500" color="white" p={3} borderRadius="full">
+        <FaUser />
+        <Text ml={2}>Fredrik</Text>
+      </Button>
       <Modal isOpen={profileModalIsOpen} onClose={profileModalOnClose}>
         <ModalOverlay />
         <ModalContent>
