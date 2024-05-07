@@ -49,7 +49,7 @@ const Index = () => {
   };
 
   return (
-    <Container centerContent maxW="container.md" padding={4}>
+    <Container maxW="full" padding={4}>
       <VStack spacing={4} align="stretch">
         <MessageHistory />
         <Text fontSize="2xl" mb={4}>
